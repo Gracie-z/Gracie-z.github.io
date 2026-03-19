@@ -1,0 +1,23 @@
+
+{{ if not (eq .Site.Params.footer.show_footer false) }}
+<footer>
+
+    {{ if and .Site.Params (isset .Site.Params "social") }}
+    {{ with .Site.Params.social }}
+        <ul>
+        {{ range sort . "weight" }}
+            <li><a href="{{ .url }}" title="{{ .name }}"><i class="{{ .class }}"></i></a></li>
+        {{ end }}
+        </ul> 
+    {{ end }}
+    {{ end }}
+
+    {{ .Site.Copyright | safeHTML }}
+
+    <p style="font-size: 0.8em; opacity: 0.7; margin-top: 1em;">
+   Design based on the
+   <a href="https://github.com/timothygebhard/barks">barks</a> theme by Timothy Gebhard.
+   </p>
+
+</footer>
+{{ end }}
