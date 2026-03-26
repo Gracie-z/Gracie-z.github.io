@@ -2,6 +2,7 @@ baseURL = "https://gracie-z.github.io/"
 languageCode = "en-us"
 title = "Yanxin Zhou"
 theme = "barks"
+publishDir = "docs"
 
 [params.head]
   description = "third-year PhD student in Stats @Stanford"
@@ -51,4 +52,4 @@ theme = "barks"
   name = "Beyond Math"
   url = "/beyond_math/"
   weight = 4
-publishDir = "docs"
+
