@@ -6,12 +6,6 @@ theme = "barks"
 [params.head]
   description = "third-year PhD student in Stats @Stanford"
 
-[params.colors]
-    theme_color = "#333333"
-    background_color = "#e9f5db"
-    text_color = "#333333"
-    link_color = "#7ea122"
-
 
 [params.social]
     [params.social.email]
