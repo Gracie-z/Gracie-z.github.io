@@ -6,6 +6,12 @@ theme = "barks"
 [params.head]
   description = "third-year PhD student in Stats @Stanford"
 
+[params.colors]
+    theme_color = "#333333"
+    background_color = "#e9f5db"
+    text_color = "#333333"
+    link_color = "#7ea122"
+
 
 [params.social]
     [params.social.email]
@@ -18,6 +24,13 @@ theme = "barks"
         class = "ai ai-google-scholar-square ai"
         url = "https://scholar.google.com/citations?user=wxIV1rYAAAAJ&hl=en"
         weight = 2
+    [params.social.arxiv]
+        name = "arXiv"
+        class = "ai ai-arxiv ai"
+        url = "https://arxiv.org/a/zhou_y_20"
+        weight = 3
+
+
 
 [params.typography]
     title_font = "Gelasio"
