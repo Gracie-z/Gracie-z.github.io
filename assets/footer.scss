@@ -27,14 +27,15 @@ footer ul li a i {
 }
 
 footer ul {
-	display: table;
-	margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     padding: 0;
 }
 
 footer li {
-	list-style-type: none;
-	display: inline-block;
+    list-style-type: none;
     padding: 0px 10px;
 }
 
