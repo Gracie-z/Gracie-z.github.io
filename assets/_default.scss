@@ -22,9 +22,22 @@ body {
 	font-size: 20px;
 	line-height: 160%;
     font-display: swap;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.outer, .middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     max-width: 768px;
