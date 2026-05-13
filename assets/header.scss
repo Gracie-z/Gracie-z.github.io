@@ -16,6 +16,13 @@ header .title {
     font-display: swap;
 }
 
+header .title-zh {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 0.58em;
+    margin-left: 0.3em;
+    vertical-align: middle;
+}
+
 @media only screen and (max-width: 600px) {
 
     header .title {
