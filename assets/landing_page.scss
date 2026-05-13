@@ -21,8 +21,9 @@
 
 .landing-page-image img {
     margin: 0;
-    height: auto;
     width: 100%;
+    height: auto;
+    aspect-ratio: 3114 / 3634; /* reserves correct space before image loads, preventing layout shift */
 }
 
 
