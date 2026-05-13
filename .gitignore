@@ -2,3 +2,15 @@ public/
 .DS_Store
 .hugo_build.lock
 resources/_gen/
+
+# Stale root-level Hugo output (all output must go to docs/)
+/404.html
+/beyond_math/
+/categories/
+/index.html
+/index.xml
+/research/
+/sitemap.xml
+/styles.*.css
+/tags/
+/teaching/
