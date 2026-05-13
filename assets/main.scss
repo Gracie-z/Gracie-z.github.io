@@ -60,3 +60,5 @@ main {
 }
 
 main > :first-child { margin-top: 0 !important; }
+
+h1:empty { display: none; }
