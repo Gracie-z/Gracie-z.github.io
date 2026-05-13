@@ -1,7 +1,7 @@
 ---
 title: "Yanxin Zhou"
 layout: "landing_page"
-image: "images/profile.jpg"
+image: "images/profile2.jpg"
 ---
 email: yanxin01 at stanford dot edu
 
