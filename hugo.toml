@@ -24,6 +24,11 @@ publishDir = "docs"
         class = "ai ai-arxiv ai"
         url = "https://arxiv.org/a/zhou_y_20"
         weight = 3
+    [params.social.github]
+        name = "GitHub"
+        class = "fab fa-github"
+        url = "https://github.com/Gracie-z"
+        weight = 4
 
 
 

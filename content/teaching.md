@@ -9,3 +9,4 @@
 - **STATS 217** — Introduction to Stochastic Processes I (Summer 2025)
 - **STATS 218** — Introduction to Stochastic Processes II (Spring 2024)
 - **STATS 310A / MATH 230A** — Theory of Probability (Autumn 2024)
+- **STATS 310C / MATH 230C** — Theory of Probability (Spring 2026)
