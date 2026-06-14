@@ -1,4 +1,6 @@
-
+---
+wide: true
+---
 
 ## TA at Stanford  
 

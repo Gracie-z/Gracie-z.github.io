@@ -45,6 +45,10 @@ body {
     box-sizing: border-box;
 }
 
+.inner--wide {
+    max-width: 1100px;
+}
+
 @media only screen and (max-width: 600px) {
     .inner {
         max-width: 400px;
