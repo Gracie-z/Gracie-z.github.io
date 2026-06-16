@@ -29,6 +29,11 @@ publishDir = "docs"
         class = "fab fa-github"
         url = "https://github.com/Gracie-z"
         weight = 4
+    [params.social.linkedin]
+        name = "LinkedIn"
+        class = "fab fa-linkedin"
+        url = "https://www.linkedin.com/in/yanxin-zhou-97a5952b8/"
+        weight = 5
 
 
 
