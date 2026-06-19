@@ -37,6 +37,11 @@ publishDir = "docs"
 
 
 
+[params.colors]
+    background_color = "#f2f7f0"
+    text_color = "#333333"
+    link_color = "#6a9e6b"
+
 [params.typography]
     title_font = "Gelasio"
     body_font = "Bona Nova"
