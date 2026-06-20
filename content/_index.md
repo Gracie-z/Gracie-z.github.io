@@ -10,3 +10,5 @@ I'm a third-year Statistics PhD student at Stanford University, advised by [Sour
 
 
 My research focuses broadly on probability theory, with particular emphasis on problems arising from statistical physics. My current work explores topics including Yang–Mills theory, random walks, and Liouville quantum gravity.
+
+I have also become interested in AI4Math and AI more broadly — see my [AI4Math](/ai4math/) page. If you share similar interests, feel free to reach out!
