@@ -1,69 +1,20 @@
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: $background-color;
-    z-index: 100;
-    text-align: center;
-    padding-top: 0.6em;
-    padding-bottom: 0.6em;
-    font-size: small;
+.site-credits {
+    text-align: left;
+    font-size: 0.8em;
+    opacity: 0.5;
+    padding: 4em 0 2em;
     color: $text-color;
 
-    /* short centered divider instead of full-width border */
-    &::before {
-        content: '';
-        display: block;
-        width: 240px;
-        height: 1px;
-        background: $text-color;
-        margin: 0 auto 0.6em;
+    a {
+        color: $text-color;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 3px;
     }
 
-    .fas, .fab, .ai {
-        font-size: 2rem;
-        transition: color .15s ease-in-out, transform .15s ease-in-out;
-    }
-
-    .fas:hover, .fab:hover, .ai:hover {
+    a:hover {
         color: $link-color;
-        transform: scale(1.5);
+        text-decoration-style: solid;
     }
-}
-
-footer ul li a i {
-    color: $text-color;
-}
-
-footer ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 0;
-}
-
-footer li {
-    list-style-type: none;
-}
-
-/* fixed-size icon container so every icon sits at the same height */
-footer li a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2rem;
-    text-decoration: none;
-    color: $text-color;
-}
-
-footer li a:hover {
-    text-decoration: none;
-}
-
-footer a {
-    color: $text-color;
 }

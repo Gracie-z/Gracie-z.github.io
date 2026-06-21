@@ -63,8 +63,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 22px;
-    margin-top: 2.4em;
+	font-family: $title-font, serif;
+	font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-top: 0;
+    margin-bottom: 1.2em;
+    margin-left: -0.04em;
+    color: $text-color;
+    text-align: left;
+}
+
+.title-dot {
+    color: $link-color;
 }
 
 h2 {

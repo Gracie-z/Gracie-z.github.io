@@ -1,0 +1,14 @@
+
+{{ if ne .Site.Params.navigation.show_navigation false }}
+<nav>
+    <ul>
+    {{ range .Site.Menus.main }}
+        {{ $anchor := trim .URL "/" }}
+        {{ if eq $anchor "" }}
+            {{ $anchor = "home" }}
+        {{ end }}
+        <li><a href="#{{ $anchor }}">{{ .Name }}</a></li>
+    {{ end }}
+    </ul>
+</nav>
+{{ end }}

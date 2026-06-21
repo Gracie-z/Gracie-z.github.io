@@ -4,8 +4,8 @@ main {
 	flex: 1;
 	text-align: left;
 	width: 100%;
-	padding-top: 25px;
-    padding-bottom: 40px;
+	padding-top: 10px;
+    padding-bottom: 60px;
     color: $text-color;
 
     a {
@@ -13,9 +13,11 @@ main {
         text-decoration: underline;
         text-decoration-style: dotted;
         text-underline-offset: 3px;
+        transition: color 0.2s;
     }
 
     a:hover  {
+        color: $link-color;
         text-decoration-style: solid;
         text-decoration-color: $link-color;
     }

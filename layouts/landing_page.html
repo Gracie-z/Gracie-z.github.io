@@ -1,0 +1,48 @@
+
+{{ define "main" }}
+
+<!-- Home section -->
+<section id="home" class="page-section" data-section-title="Home">
+<div class="landing-page-wrapper">
+    <div class="landing-page-content">
+        <div>
+            {{ .Content | safeHTML }}
+        </div>
+    </div>
+    <div class="landing-page-image">
+        <img src="{{ .Params.image }}" alt="{{ .Site.Params.header.title }}" width="221" height="331">
+    </div>
+</div>
+{{ if and .Site.Params (isset .Site.Params "social") }}
+{{ with .Site.Params.social }}
+<div class="social-icons">
+    {{ range sort . "weight" }}
+    <a href="{{ .url }}" title="{{ .name }}" class="social-glass">
+        <i class="{{ .class }}"></i>
+    </a>
+    {{ end }}
+</div>
+{{ end }}
+{{ end }}
+<div class="scroll-indicator">
+    <a href="#research">SCROLL<br>↓</a>
+</div>
+</section>
+
+<!-- Other sections -->
+{{ range .Site.Menus.main }}
+    {{ $menuName := .Name }}
+    {{ if ne .URL "/" }}
+        {{ $id := trim .URL "/" }}
+        {{ $path := strings.TrimSuffix "/" .URL }}
+        {{ with site.GetPage $path }}
+        <section id="{{ $id }}" class="page-section" data-section-title="{{ $menuName }}">
+            <h1>{{ $menuName }}<span class="title-dot">.</span></h1>
+            {{ .Content | safeHTML }}
+        </section>
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+
+{{ end }}

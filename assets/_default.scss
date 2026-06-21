@@ -12,15 +12,16 @@
 }
 
 html {
-    overflow-y: scroll; /* always reserve scrollbar gutter — prevents horizontal shift on page transitions */
-    scrollbar-gutter: stable; /* modern browsers: reserve gutter without forcing visible track */
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: $background-color;
 	font-family: $body-font, sans-serif;
 	font-size: 16px;
-	line-height: 160%;
+	line-height: 175%;
     font-display: swap;
     min-height: 100vh;
     display: flex;
@@ -41,7 +42,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 960px;
-    padding: 0 16px 140px; /* bottom padding clears the fixed footer */
+    padding: 0 16px 40px;
     box-sizing: border-box;
 }
 
@@ -52,5 +53,54 @@ body {
 @media only screen and (max-width: 600px) {
     .inner {
         max-width: 480px;
+    }
+}
+
+.page-section {
+    scroll-margin-top: 80px;
+}
+
+.page-section + .page-section {
+    margin-top: 8em;
+}
+
+.page-section > :first-child {
+    margin-top: 0 !important;
+}
+
+.page-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.page-section li {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1.5em 2em;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-section li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.page-section li p {
+    margin: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .page-section + .page-section {
+        margin-top: 5em;
+    }
+
+    .page-section li {
+        padding: 1.2em 1.5em;
+        border-radius: 12px;
     }
 }

@@ -38,7 +38,7 @@ publishDir = "docs"
 
 
 [params.colors]
-    background_color = "#f2f7f0"
+    background_color = "#dce5dc"
     text_color = "#333333"
     link_color = "#6a9e6b"
 

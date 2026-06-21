@@ -8,7 +8,7 @@
 
         <div class="outer">
             <div class="middle">
-                <div class="inner{{ if .Params.wide }} inner--wide{{ end }}">
+                <div class="inner">
 
                     {{- partial "header.html" . -}}
                     {{- partial "navigation.html" . -}}
@@ -24,6 +24,7 @@
         </div>
 
         {{- partial "math.html" . -}}
+
 
     </body>
 </html>
