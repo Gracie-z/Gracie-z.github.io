@@ -27,6 +27,7 @@ nav li {
 	font-size: 16px;
     padding: 0;
     margin: 0;
+    white-space: nowrap;
 }
 
 nav a {
@@ -41,17 +42,77 @@ nav a:hover {
     color: $link-color;
 }
 
+.nav-toggle {
+    display: none;
+}
+
+.nav-hamburger {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
 
     nav {
         top: 12px;
+        left: auto;
+        right: 16px;
+        transform: none;
+    }
+
+    .nav-hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        padding: 10px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+        transition: transform 0.2s ease;
+    }
+
+    .nav-hamburger:hover {
+        transform: translateY(-2px);
+    }
+
+    .nav-hamburger span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: $text-color;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-toggle:checked + .nav-hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle:checked + .nav-hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle:checked + .nav-hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 
     nav ul {
+        display: none;
         flex-direction: column;
-        gap: 0.6em;
-        border-radius: 24px;
-        padding: 1em 2em;
+        gap: 0.8em;
+        border-radius: 20px;
+        padding: 1.2em 2em;
+        margin-top: 0.5em;
+    }
+
+    .nav-toggle:checked ~ ul {
+        display: flex;
     }
 
 }

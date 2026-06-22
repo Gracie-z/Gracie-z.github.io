@@ -1,13 +1,19 @@
 
 {{ if ne .Site.Params.navigation.show_navigation false }}
 <nav>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
     <ul>
     {{ range .Site.Menus.main }}
         {{ $anchor := trim .URL "/" }}
         {{ if eq $anchor "" }}
             {{ $anchor = "home" }}
         {{ end }}
-        <li><a href="#{{ $anchor }}">{{ .Name }}</a></li>
+        <li><a href="#{{ $anchor }}" onclick="document.getElementById('nav-toggle').checked=false">{{ .Name }}</a></li>
     {{ end }}
     </ul>
 </nav>

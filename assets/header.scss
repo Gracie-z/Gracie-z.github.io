@@ -2,14 +2,14 @@
 header {
 	text-align: center;
 	position: static;
-	margin-top: 100px;
+	margin-top: clamp(80px, 12vw, 100px);
     margin-bottom: 30px;
     line-height: 1.1;
 }
 
 header .title {
     font-family: $title-font, serif;
-    font-size: 48px;
+    font-size: clamp(2.25rem, 5vw, 3rem);
     font-weight: 400;
     text-decoration: none;
     margin: 0;
@@ -34,12 +34,7 @@ header .title-zh {
 
 @media only screen and (max-width: 600px) {
 
-    header {
-        margin-top: 60px;
-    }
-
     header .title {
-        font-size: 36px;
         margin-bottom: 10px;
     }
 
