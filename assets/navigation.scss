@@ -28,6 +28,17 @@ nav li {
     padding: 0;
     margin: 0;
     white-space: nowrap;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+nav li:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 nav a {

@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 
     
     <meta name="generator" content="Hugo 0.158.0">
@@ -34,7 +34,7 @@
     <meta name="twitter:title" content="Yanxin Zhou" />
 
     
-    <link rel="canonical" href="https://gracie-z.github.io/ai4math/">
+    <link rel="canonical" href="http://localhost:1313/ai4math/">
 
     
     <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon">
@@ -42,7 +42,7 @@
     
     
     
-    <link rel="stylesheet" href="https://gracie-z.github.io/styles.403ee2a6011bf5faca6574a6c5ec0e28ff792eb7cb0b94c723404ad1a0a27129.css">
+    <link rel="stylesheet" href="http://localhost:1313/styles.6452fac928d8273a4c6a117d9673b147713d010bcac6e9f85e9239002b13e4b7.css">
 
     
     
@@ -140,5 +140,39 @@
             </div>
         </div>
 
-</body>
+<script>
+        (function() {
+            document.body.classList.add('reveal-ready');
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            document.querySelectorAll('.page-section').forEach(function(section) {
+                observer.observe(section);
+            });
+
+            function trackMouse(el) {
+                el.addEventListener('mousemove', function(e) {
+                    var rect = el.getBoundingClientRect();
+                    el.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+                    el.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+                });
+                el.addEventListener('mouseleave', function() {
+                    el.style.setProperty('--mouse-x', '-999px');
+                    el.style.setProperty('--mouse-y', '-999px');
+                });
+            }
+
+            document.querySelectorAll('.page-section').forEach(trackMouse);
+            document.querySelectorAll('.page-section li').forEach(trackMouse);
+            document.querySelectorAll('.social-glass').forEach(trackMouse);
+        })();
+        </script>
+
+    </body>
 </html>
