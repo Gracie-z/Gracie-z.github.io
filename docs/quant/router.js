@@ -3,25 +3,35 @@
   const publicBase = "/quant";
   const frame = document.querySelector("#quantArchiveFrame");
 
-  function normalizeRoute(value) {
+  function normalizeQuantRoute(value) {
     const route = String(value || "/").replace(/\/+$/, "") || "/";
-    return /^\/(?:review|process|mle(?:\/(?:review|process))?)?$/.test(route) ? route : "/";
+    return /^\/(?:review|process)?$/.test(route) ? route : "/";
   }
 
   function routeFromAddress() {
-    return normalizeRoute(location.pathname.slice(publicBase.length));
+    return normalizeQuantRoute(location.pathname.slice(publicBase.length));
   }
 
-  function publicPath(route) {
-    return route === "/" ? `${publicBase}/` : `${publicBase}${route}`;
+  function quantPublicPath(route) {
+    return route === "/" ? `${publicBase}/` : `${publicBase}${route}/`;
+  }
+
+  function mlePublicPath(route) {
+    const normalized = String(route || "/mle").replace(/\/+$/, "") || "/mle";
+    return normalized === "/mle" ? "/mle/" : `${normalized}/`;
   }
 
   frame.src = `${workerOrigin}${routeFromAddress()}`;
 
   window.addEventListener("message", (event) => {
     if (event.origin !== workerOrigin || event.data?.type !== "quant-archive:navigate") return;
-    const route = normalizeRoute(event.data.route);
-    const path = publicPath(route);
+    const requestedRoute = String(event.data.route || "/").replace(/\/+$/, "") || "/";
+    if (/^\/mle(?:\/(?:problems|review|process))?$/.test(requestedRoute)) {
+      location.href = mlePublicPath(requestedRoute);
+      return;
+    }
+    const route = normalizeQuantRoute(requestedRoute);
+    const path = quantPublicPath(route);
     if (location.pathname !== path) history.pushState({ route }, "", path);
   });
 
