@@ -5,7 +5,8 @@
 
   function normalizeWorkerRoute(value) {
     const route = String(value || "/mle").replace(/\/+$/, "") || "/mle";
-    return /^\/mle(?:\/(?:problems|review|process))?$/.test(route) ? route : "/mle";
+    if (route === "/mle/problems") return "/mle";
+    return /^\/mle(?:\/(?:review|advice|process))?$/.test(route) ? route : "/mle";
   }
 
   function workerRouteFromAddress() {
