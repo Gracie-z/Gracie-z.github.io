@@ -1,5 +1,6 @@
 (() => {
   const workerOrigin = "https://gracie-quant-archive.gracie-quant-archive.workers.dev";
+  const workerVersion = "20260810-09";
   const publicBase = "/mle";
   const frame = document.querySelector("#mleArchiveFrame");
 
@@ -23,7 +24,7 @@
     return normalized === "/" ? "/quant/" : `/quant${normalized}/`;
   }
 
-  frame.src = `${workerOrigin}${workerRouteFromAddress()}`;
+  frame.src = `${workerOrigin}${workerRouteFromAddress()}?v=${workerVersion}`;
 
   window.addEventListener("message", (event) => {
     if (event.origin !== workerOrigin || event.data?.type !== "quant-archive:navigate") return;
