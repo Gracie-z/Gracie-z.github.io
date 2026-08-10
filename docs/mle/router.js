@@ -1,6 +1,6 @@
 (() => {
   const workerOrigin = "https://gracie-quant-archive.gracie-quant-archive.workers.dev";
-  const workerVersion = "20260810-11";
+  const workerVersion = "20260810-12";
   const publicBase = "/mle";
   const frame = document.querySelector("#mleArchiveFrame");
 
