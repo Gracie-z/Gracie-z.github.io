@@ -1,13 +1,13 @@
 (() => {
   const workerOrigin = "https://gracie-quant-archive.gracie-quant-archive.workers.dev";
-  const workerVersion = "20260810-14";
+  const workerVersion = "20260810-15";
   const publicBase = "/mle";
   const frame = document.querySelector("#mleArchiveFrame");
 
   function normalizeWorkerRoute(value) {
     const route = String(value || "/mle").replace(/\/+$/, "") || "/mle";
     if (route === "/mle/problems") return "/mle";
-    return /^\/mle(?:\/(?:cs224n|review|advice|process))?$/.test(route) ? route : "/mle";
+    return /^\/mle(?:\/(?:courses|cs224n|review|advice|process))?$/.test(route) ? route : "/mle";
   }
 
   function workerRouteFromAddress() {
